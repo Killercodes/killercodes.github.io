@@ -1,0 +1,77 @@
+
+body {
+    min-width: 1500px;
+    font: normal normal 16px Calibri;
+    color: #ededed;
+    background: #1d1f21 none no-repeat scroll center center;
+    padding: 0 40px 40px 40px;
+}
+
+html body .region-inner {
+    min-width: 0;
+    max-width: 100%;
+    width: auto;
+}
+
+a:link {
+    text-decoration:none;
+    color: #95baf8;
+}
+
+a:visited {
+    text-decoration:none;
+    color: #ffb726;
+}
+
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+    min-width: 1500px;
+    max-width: 1500px;
+    _width: 1500px;
+}
+
+.main-inner .columns {
+    padding-left: 220px;
+    padding-right: 0px;
+}
+
+.main-inner .fauxcolumn-center-outer {
+    left: 220px;
+    right: 0px;
+    /* IE6 does not respect left and right together */
+    _width: expression(this.parentNode.offsetWidth -
+    parseInt("220px") -
+    parseInt("0px") + 'px');
+}
+
+.main-inner .fauxcolumn-left-outer {
+    width: 220px;
+}
+
+.main-inner .fauxcolumn-right-outer {
+    width: 0px;
+}
+
+.main-inner .column-left-outer {
+    width: 220px;
+    right: 100%;
+    margin-left: -220px;
+}
+
+.main-inner .column-right-outer {
+    width: 0px;
+    margin-right: -0px;
+}
+
+#layout {
+    min-width: 0;
+}
+
+#layout .content-outer {
+    min-width: 0;
+    width: 800px;
+}
+
+#layout .region-inner {
+    min-width: 0;
+    width: auto;
+}
