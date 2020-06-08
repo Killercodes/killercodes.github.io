@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
+  text-shadow: #62605f 1px 2px 0px;
 }
 @media screen and (max-width: 640px) {
   h1, h2, h3, h4, h5, h6 {
@@ -42,14 +43,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 35px;
+   text-shadow: #ff5900 0px 0px 5px,  #ff5900 0px 0px 25px;
+   
+   color:#fff
 }
 h1 a {
   color: inherit;
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 27px;
+  //text-shadow:#ffffff 0px 0px 2px;
+   color:#fff
+
 }
 
 h3 {
@@ -269,7 +276,7 @@ nav a {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: #eee;
+  background-color: #201f1f; 
 }
 
 footer {
@@ -278,7 +285,7 @@ footer {
 }
 
 .highlight {
-  background-color: #252424;
+  background-color: #29272773;
   padding: 7px 7px 7px 10px;
   //border: 1px solid #4c4b4b;
   -moz-box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
