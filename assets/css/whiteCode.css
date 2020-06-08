@@ -75,7 +75,7 @@ p {
 }
 
 a {
-  color: #4183C4;
+  /*color: #4183C4;*/
   text-decoration: none;
   cursor: pointer;
 }
@@ -85,7 +85,7 @@ a:hover, a:active {
 
 a:link {
     text-decoration:none;
-    color: #95baf8;
+    /*color: #95baf8;*/
 }
 
 a:visited {
@@ -281,7 +281,7 @@ nav a {
   margin-top: 50px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  background-color: #201f1f; 
+ /* background-color: #201f1f; */
 }
 
 footer {
