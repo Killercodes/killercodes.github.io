@@ -27,6 +27,7 @@ var colorArray = [
 window.addEventListener('resize',function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    canvas.style.zIndex = 15; 
     init();
 });
 
