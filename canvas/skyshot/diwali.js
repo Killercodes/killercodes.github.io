@@ -152,11 +152,11 @@ window.addEventListener('mousedown',function(){
         launchFrom(Math.random() * 960 * 2 / 3 + 960 / 6);
     }
     */
-    /*
+    
     for (var i = 0; i < 5; i++) {
         launchFrom(Math.random() * SCREEN_WIDTH * 2 / 3 + SCREEN_WIDTH / 6);
     }
-    */
+    
     //launch();
     //launchFrom(Math.random() * 960 * 2 / 3 + 960 / 6);
 });
