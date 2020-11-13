@@ -15,7 +15,7 @@ var SCREEN_WIDTH = window.innerWidth,
     colorCode = 0;
 
 // constants
-var FPS = 60;
+var FPS = 30;
 var ROCKET_PER_SECOND = 10;
 
 var MAX_PARTICLES = 9999;
@@ -63,6 +63,7 @@ function RandomNext(v)
     return result;
 }
 
+var MESSAGE = GetURLParameter("msg");
 
 // init
 function initialize()
@@ -72,6 +73,7 @@ function initialize()
     canvas.height = SCREEN_HEIGHT;
     setInterval(launch, ROCKET_PER_SECOND);
     setInterval(loop, 1000/FPS);
+	
 }
 
 // Event: update mouse position
@@ -185,42 +187,49 @@ function launchFrom(x) {
 }
 
 function RefreshScreen(screenFade)
-{
-    // update screen size
-    /*
-    if (SCREEN_WIDTH != window.innerWidth) {
-        canvas.width = SCREEN_WIDTH = window.innerWidth;
-    }
-    if (SCREEN_HEIGHT != window.innerHeight) {
-        canvas.height = SCREEN_HEIGHT = window.innerHeight;
-    }
-    */
-
-   // add linear gradient
-   //[{color:"40405c",position:0},{color:"6f71aa",position:80},{color:"8a76ab",position:100}],
-   /*
-   var grd = context.createLinearGradient(0, 0, 0, canvas.height);
-   grd.addColorStop(0.0, '#40405c');   
-   grd.addColorStop(0.8, '#6f71aa'); //001a41
-   grd.addColorStop(1, '#8a76ab');
-   context.fillStyle = grd;
-   */
-
-    //DyanmicGradient();
-	
-	context.fillStyle = "rgba(255,250,255,10)";
-	context.font = 'Bold Italic 60px Sans-Serif';
-	context.textBaseline = 'Top';
-	context.fillText ('Wishing  you Happy Diwali !', 
-	(SCREEN_WIDTH/2) - 350, SCREEN_HEIGHT/2);
-
+{   
     // clear canvas
     context.fillStyle = "rgba(0,0,0,"+screenFade+")"//grd;
     context.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     //context.clearRect(0,0,SCREEN_WIDTH, SCREEN_HEIGHT);
     //context.globalAlpha = 0.52;
+
+	wishes();
+}
+
+function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+
+function wishes()
+{
+	var tc = RGBA(-1,-1,-1,100);
 	
-	
+	context.fillStyle = tc;//"rgba(255,250,250,200)";
+	context.font = 'Bold Italic 60px Sans-Serif';
+	context.textBaseline = 'Top';
+	context.shadowBlur = 50;
+	context.shadowColor = tc;//"rgb(190, 190, 0)";
+	if(MESSAGE != undefined && MESSAGE != null)
+	{
+		context.fillText (MESSAGE, (SCREEN_WIDTH/2) - 350, SCREEN_HEIGHT/2);
+
+	}
+	else
+	{
+		context.fillText ('Wishing  you Happy Diwali !', (SCREEN_WIDTH/2) - 350, SCREEN_HEIGHT/2);
+	}
+	context.shadowBlur = 0;
 }
 
 var seed = { Id : 0 , size : 15 , max : 5 };
