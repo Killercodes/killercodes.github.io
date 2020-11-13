@@ -18,7 +18,7 @@ var SCREEN_WIDTH = window.innerWidth,
 var FPS = 60;
 var ROCKET_PER_SECOND = 10;
 
-var MAX_PARTICLES = 999999;
+var MAX_PARTICLES = 9999;
 var MIN_PARTICLES = 100;
 var SCREEN_FADE = 0.3;
 
